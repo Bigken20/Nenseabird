@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nenseabird</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+/* HERO IMAGE */
+.hero {
+    background: url('pictures/cover.jpg') center/cover no-repeat;
+    height: 260px;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* NAV */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #2d1fa3, #1e88e5);
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD */
+.journal-entry {
+    min-width: 280px;
+    max-width: 280px;
+    height: 360px;
+
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 4px solid #1e88e5;
+}
+
+/* MEDIA */
+.media {
+    display: block;
+}
+
+.media img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.media iframe {
+    width: 100%;
+    height: 180px;
+    border: none;
+    background: #000;
+    display: block;
+    position: relative;
+}
+
+/* CONTENT */
+.journal-content {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.journal-content h2 {
+    color: #2d1fa3;
+    font-size: 1.1rem;
+}
+
+.journal-content p {
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* CONTROLS */
+.controls {
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(90deg, #2d1fa3, #1e88e5);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #2d1fa3, #1e88e5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 6px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero {
+        height: 180px;
+    }
+
+    .journal-entry {
+        min-width: 85%;
+    }
+}
+</style>
+
+<script>
+function openMedia(src) {
+    window.open(src, "_blank");
+}
+
+function slideLeft() {
+    document.querySelector('.slider').scrollBy({
+        left: -300,
+        behavior: 'smooth'
+    });
+}
+
+function slideRight() {
+    document.querySelector('.slider').scrollBy({
+        left: 300,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="overlay">
+        <h1>Nenseabird Diagnostics Lab</h1>
+        <p>Parasite Microscopy • Case Studies • Health Insights</p>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Me</a>
+</nav>
+
+<div class="slider">
+
+    <!-- 1 IMAGE -->
+    <div class="journal-entry">
+        <div class="media" onclick="openMedia('pictures/img65.jpg')">
+            <img src="pictures/img65.jpg" alt="Microscope slide image from a diagnostic study">
+        </div>
+        <div class="journal-content">
+            <h2>Study 1</h2>
+            <p>Close-up microscope image of diagnostic slides used to identify parasites and cellular changes.</p>
+        </div>
+    </div>
+
+    <!-- 2 VIDEO -->
+    <div class="journal-entry">
+        <div class="media">
+            <iframe
+                src="https://www.youtube.com/embed/pEWU8FxkdWc?rel=0"
+                title="Study Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+            ></iframe>
+        </div>
+        <div class="journal-content">
+            <h2>Study Video</h2>
+            <p>A short YouTube clip highlighting key microscopy findings and research insights from the study.</p>
+        </div>
+    </div>
+
+    <!-- 3 IMAGE -->
+    <div class="journal-entry">
+        <div class="media" onclick="openMedia('pictures/img24.jpg')">
+            <img src="pictures/img24.jpg" alt="Parasite microscopy image from a laboratory case">
+        </div>
+        <div class="journal-content">
+            <h2>Study 2</h2>
+            <p>A laboratory parasite microscopy image showing stained specimens and diagnostic detail.</p>
+        </div>
+    </div>
+
+    <!-- 4 VIDEO -->
+    <div class="journal-entry">
+        <div class="media">
+            <iframe
+                src="https://www.youtube.com/embed/TTgyzc6KUQM?rel=0"
+                title="Case Study Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+            ></iframe>
+        </div>
+        <div class="journal-content">
+            <h2>Case Study Video</h2>
+            <p>A video walkthrough explaining the case study, laboratory methods, and results interpretation.</p>
+        </div>
+    </div>
+
+    <!-- 5 IMAGE -->
+    <div class="journal-entry">
+        <div class="media" onclick="openMedia('pictures/img33.jpg')">
+            <img src="pictures/img33.jpg" alt="Public health trends image in a community healthcare context">
+        </div>
+        <div class="journal-content">
+            <h2>Public Health Trends</h2>
+            <p>An image illustrating public health patterns and disease surveillance among communities in the Niger Delta.</p>
+        </div>
+    </div>
+
+    <!-- 6 VIDEO -->
+    <div class="journal-entry">
+        <div class="media">
+            <iframe
+                src="https://www.youtube.com/embed/_Qe10yi7Osw?rel=0"
+                title="Research Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+            ></iframe>
+        </div>
+        <div class="journal-content">
+            <h2>Research Video</h2>
+            <p>A YouTube summary of research data, microscopy trends, and the clinical implications of the findings.</p>
+        </div>
+    </div>
+
+    <!-- 7 IMAGE -->
+    <div class="journal-entry">
+        <div class="media" onclick="openMedia('pictures/img38.jpg')">
+            <img src="pictures/img38.jpg" alt="Advanced medical microscopy observation image">
+        </div>
+        <div class="journal-content">
+            <h2>Study 4</h2>
+            <p>An advanced microscopy photograph capturing detailed medical observations for laboratory research.</p>
+        </div>
+    </div>
+
+    <!-- 8 VIDEO -->
+    <div class="journal-entry">
+        <div class="media">
+            <iframe
+                src="https://www.youtube.com/embed/2ae8TmMqPqM?rel=0"
+                title="Clinical Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+            ></iframe>
+        </div>
+        <div class="journal-content">
+            <h2>Clinical Video</h2>
+            <p>A clinical training video demonstrating laboratory diagnosis steps and safe sample handling.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="controls">
+    <button onclick="slideLeft()">⬅</button>
+    <button onclick="slideRight()">➡</button>
+</div>
+
+<footer>
+    <p>Connect with MLS. Nengi</p>
+    <div class="socials">
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://youtube.com/@dienaghaayebanengiyefa-zc2tp?si=zpAUWplRsAnoeAUw">YouTube</a>
+        <a href="https://www.tiktok.com/@anenks?is_from_webapp=1&sender_device=pc">TikTok</a>
+        <a href="https://facebook.com">Facebook</a>
+    </div>
+    <p>© 2026 Medical Journal</p>
+</footer>
+
+</body>
+</html>
