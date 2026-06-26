@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Nenseabird</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+/* HERO IMAGE */
+.hero {
+    background: url('pictures/cover.jpg') center/cover no-repeat;
+    height: 260px;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* NAV */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #2d1fa3, #1e88e5);
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* CONTENT */
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.about-content h1 {
+    color: #2d1fa3;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 3px solid #1e88e5;
+    padding-bottom: 15px;
+}
+
+.about-content h2 {
+    color: #2d1fa3;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.about-content strong {
+    color: #1e88e5;
+}
+
+.about-content ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.about-content blockquote {
+    border-left: 4px solid #1e88e5;
+    padding-left: 20px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #555;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.profile-image {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    display: block;
+    border: 3px solid #1e88e5;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #2d1fa3, #1e88e5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 6px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero {
+        height: 180px;
+    }
+
+    .about-container {
+        padding: 20px 10px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="overlay">
+        <h1>About Me</h1>
+        <p>Learn more about my passion and mission</p>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Me</a>
+</nav>
+
+<div class="about-container">
+    <div class="about-content">
+        <h1>Ayebanengiyefa Simeon Dienagha</h1>
+
+        <img src="pictures/Personal image.jpeg" alt="Ayebanengiyefa Simeon Dienagha" class="profile-image">
+
+        <p>I am <strong>Ayebanengiyefa Simeon Dienagha</strong>, a retired Medical Laboratory Scientist with a lifelong passion for disease diagnosis through microscopy. I was certified in malaria microscopy by the World Health Organization (WHO) in 2010 and have dedicated my professional career to the identification and study of disease-causing parasites.</p>
+
+        <p>My work focuses on the screening and detection of endemic Neglected Tropical Diseases (NTDs) in the Niger Delta region of Nigeria. Through parasite microscopy, I examine stool, urine, and blood samples to identify infections that often go unnoticed yet can significantly affect human health.</p>
+
+        <p>I am particularly interested in exposing endemic parasitic infections as a possible foundation for chronic health conditions and organ damage. Many parasitic diseases remain underdiagnosed despite their impact on individuals and communities. By promoting accurate laboratory diagnosis and public awareness, I aim to contribute to better health outcomes and disease prevention.</p>
+
+        <p>Through this blog, I share knowledge, research findings, microscopy insights, and educational resources related to parasitology, malaria diagnosis, neglected tropical diseases, and laboratory science. My goal is to help healthcare professionals, students, researchers, and the general public better understand the importance of parasite detection and early intervention.</p>
+
+        <h2>Areas of Focus</h2>
+        <ul>
+            <li>Parasite microscopy</li>
+            <li>Malaria diagnosis</li>
+            <li>Neglected Tropical Diseases (NTDs)</li>
+            <li>Stool examination for intestinal parasites</li>
+            <li>Urine microscopy for parasitic infections</li>
+            <li>Blood parasite identification</li>
+            <li>Public health awareness and disease prevention</li>
+        </ul>
+
+        <h2>My Mission</h2>
+        <p>To promote the early detection of parasitic infections, increase awareness of endemic diseases in the Niger Delta, and support healthier communities through accurate laboratory diagnosis and education.</p>
+
+        <blockquote>
+            "Identifying hidden parasites today to protect health tomorrow."
+        </blockquote>
+    </div>
+</div>
+
+<footer>
+    <p>Connect with MLS. Nengi</p>
+    <div class="socials">
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://youtube.com/@dienaghaayebanengiyefa-zc2tp?si=zpAUWplRsAnoeAUw">YouTube</a>
+        <a href="https://www.tiktok.com/@anenks?is_from_webapp=1&sender_device=pc">TikTok</a>
+        <a href="https://facebook.com">Facebook</a>
+    </div>
+    <p>© 2026 Medical Journal</p>
+</footer>
+
+</body>
+
+</html>
